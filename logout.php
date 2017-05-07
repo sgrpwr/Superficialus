@@ -9,5 +9,5 @@ unset($_SESSION['facebook_access_token']);
 unset($_SESSION['userData']);
 
 // Redirect to the homepage
-header("Location:NewOne/index.php");
+header("Location:./index.php");
 ?>

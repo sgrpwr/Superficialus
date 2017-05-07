@@ -66,16 +66,16 @@ if(isset($accessToken)){
 	
 	// Render facebook profile data
 	if(!empty($userData)){
-		$output  = '<h1>Facebook Profile Details </h1>';
+		$output  = '<h1></h1>';
 		$output .= '<img src="'.$userData['picture'].'">';
-        $output .= '<br/>Facebook ID : ' . $userData['oauth_uid'];
-        $output .= '<br/>Name : ' . $userData['first_name'].' '.$userData['last_name'];
-        $output .= '<br/>Email : ' . $userData['email'];
-        $output .= '<br/>Gender : ' . $userData['gender'];
-        $output .= '<br/>Locale : ' . $userData['locale'];
-        $output .= '<br/>Logged in with : Facebook';
-		$output .= '<br/><a href="'.$userData['link'].'" target="_blank">Click to Visit Facebook Page</a>';
-        $output .= '<br/>Logout from <a href="'.$logoutURL.'">Facebook</a>'; 
+        //$output .= '<br/>Facebook ID : ' . $userData['oauth_uid'];
+        $output .= '<br/>' . $userData['first_name'].' '.$userData['last_name'];
+        //$output .= '<br/>Email : ' . $userData['email'];
+        //$output .= '<br/>Gender : ' . $userData['gender'];
+        //$output .= '<br/>Locale : ' . $userData['locale'];
+        //$output .= '<br/>Logged in with : Facebook';
+		//$output .= '<br/><a href="'.$userData['link'].'" target="_blank">Click to Visit Facebook Page</a>';
+        $output .= '<br/><a href="'.$logoutURL.'">Logout</a>'; 
 	}else{
 		$output = '<h3 style="color:red">Some problem occurred, please try again.</h3>';
 	}
@@ -129,7 +129,12 @@ if(isset($accessToken)){
         <div class="row row2">
             <div class="col-sm-2">
                 <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Brand</span></h2>
-                <div><?php echo $output; ?></div>
+               <?php echo $output; ?>
+				
+				<!-- -->
+ 
+				<!-- -->
+				
             </div>
             <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
@@ -154,22 +159,23 @@ if(isset($accessToken)){
 	<nav class="menu" id="theMenu">
 	<img src="assets/img/logo.png" alt="logo" style="width: 56px;height: 56px;margin-left: -67px;padding-top: 5px;">
 		<div class="menu-wrap">
-			<h1 class="logo"><a href="index.html#home">LINK</a></h1>
+			<h1 class="logo"><a href="index.html#home">Go</a></h1>
 			<i class="fa fa-arrow-right menu-close"></i>
 			<a href="index.html">Home</a>
-			<a href="services.html">Services</a>
-			<a href="portfolio.html">Portfolio</a>
-			<a href="about.html">About</a>
-			<a href="#contact">Contact</a>
-			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#">Categories</a>
+			
+			<a href="#">Talk to us</a>
+			<a href="https://www.facebook.com/Superficialus/"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.youtube.com/channel/UC2RVNrAngpb_uS7GnjUBLTQ"><i class="fa fa-youtube"></i></a>
 			<a href="#"><i class="fa fa-twitter"></i></a>
-			<a href="#"><i class="fa fa-dribbble"></i></a>
 			<a href="#"><i class="fa fa-envelope"></i></a>
 		</div>
 		
 		<!-- Menu button -->
 		<div id="menuToggle"><i class="fa fa-bars"></i></div>
 	</nav>
+	
+	<hr class="style13">
 	
 	<!-- MAIN IMAGE SECTION -->
 	<div id="headerwrap">
@@ -271,7 +277,12 @@ if(isset($accessToken)){
 			<div class="col-lg-8">
 				<h1>Stay Connected</h1>
 				<p>Join us on our social networks for all the latest updates, product/service announcements and more.</p>
-				<br>
+				
+				<a href="https://www.facebook.com/Superficialus/"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:40px"></i></a>
+				<a href="https://www.youtube.com/channel/UC2RVNrAngpb_uS7GnjUBLTQ"><i class="fa fa-youtube-square" aria-hidden="true" style="font-size:40px"></i></a>
+				<a href="#"><i class="fa fa-envelope" aria-hidden="true" style="font-size:40px"></i></a>
+				<a href="#"><i class="fa fa-twitter-square" aria-hidden="true" style="font-size:40px"></i></a>
+			<br>
 			</div><!-- col-lg-8 -->
 			<div class="col-lg-4">
 				<img src="assets/img/logo.png" alt="logo" style="width: 200px;height: 200px;margin-left: 136px;padding-bottom: 16px;">

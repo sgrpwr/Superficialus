@@ -27,7 +27,7 @@ p {
     padding-top: 25px;
 }
 a {
-    color: #16a085;
+    color: #1c1c1c;
     word-wrap: break-word;
     -webkit-transition: color .1s ease-in, background .1s ease-in;
     -moz-transition: color .1s ease-in, background .1s ease-in;
@@ -209,7 +209,7 @@ hr {
     transition: all .1s ease-in-out;
 }
 #headerwrap {
-    background: url(../img/header-bg1.jpeg) no-repeat center top;
+    background: url(../img/header-bg1.jpg) no-repeat center top;
     margin-top: -10px;
     padding-top: 20px;
     text-align: center;
@@ -846,3 +846,4 @@ font-size: 14px;
 	background:#FFF;
 	margin:0px auto;
 }
+

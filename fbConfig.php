@@ -16,7 +16,7 @@ use Facebook\Exceptions\FacebookSDKException;
  */
 $appId 			= '709514049173948'; //Facebook App ID
 $appSecret 		= 'c64f89276a36e517afb02c1d5bb1d1b5'; //Facebook App Secret
-$redirectURL 	= 'http://localhost/facebook_login_with_php/'; //Callback URL
+$redirectURL 	= 'http://localhost/NewOne/'; //Callback URL
 $fbPermissions 	= array('email');  //Optional permissions
 
 $fb = new Facebook(array(
