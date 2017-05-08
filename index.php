@@ -153,7 +153,7 @@ if(isset($accessToken)){
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     </div>
 
-</div>
+</div> 
 	 <!-- search bar ends -->
 	<!-- Menu -->
 	<nav class="menu" id="theMenu">
