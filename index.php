@@ -115,13 +115,15 @@ if(isset($accessToken)){
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
     <script src="assets/js/modernizr.custom.js"></script>
+	<script src="jquery.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
     
   </head>
 
   <body>
      <!--search bar -->
 	 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<div id="flipkart-navbar" style="margin-top: -72px;">
+<div id="flipkart-navbar" style="margin-top: -72px; background-color: blueviolet;">
     <div class="container">
         <div class="row row1">
           
@@ -138,11 +140,12 @@ if(isset($accessToken)){
             </div>
             <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
-                    <input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search for topic, people and interest" name="">
+                    <input type="text" id="search_text" class="flipkart-navbar-input col-xs-11" placeholder="Search for topic, people and interest" name="search_text"">
                     <button class="flipkart-navbar-button col-xs-1">
                         <span class="glyphicon glyphicon-search"></span>
                     </button>
                 </div>
+				<div id="result"></div>
             </div>
         </div>
     </div>
@@ -310,3 +313,27 @@ if(isset($accessToken)){
 	</script>
   </body>
 </html>
+ <script>  
+ $(document).ready(function(){  
+      $('#search_text').keyup(function(){  
+           var txt = $(this).val();  
+           if(txt != '')  
+           {  
+                $.ajax({  
+                     url:"fetch.php",  
+                     method:"post",  
+                     data:{search:txt},  
+                     dataType:"text",  
+                     success:function(data)  
+                     {  
+                          $('#result').html(data);  
+                     }  
+                });  
+           }  
+           else  
+           {  
+                $('#result').html('');                 
+           }  
+      });  
+ });  
+ </script>  
