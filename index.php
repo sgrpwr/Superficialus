@@ -88,8 +88,6 @@ if(isset($accessToken)){
 	$output = '<a href="'.htmlspecialchars($loginURL).'"><button type="button" class="btn btn-primary" style="margin-top: 5px;">Sign in</button></a>';
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -99,6 +97,9 @@ if(isset($accessToken)){
     <meta name="description" content="Superficialus">
     <meta name="author" content="Sagar pawar">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 
     <title>Superficialus</title>
 
@@ -140,7 +141,7 @@ if(isset($accessToken)){
             </div>
             <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
-                    <input type="text" id="search_text" class="flipkart-navbar-input col-xs-11" placeholder="Search for topic, people and interest" name="search_text"">
+                    <input type="text" id="search_text" class="flipkart-navbar-input col-xs-11" placeholder="Search for topic, people and interest" name="search_text"" style="color: deeppink;">
                     <button class="flipkart-navbar-button col-xs-1">
                         <span class="glyphicon glyphicon-search"></span>
                     </button>
@@ -294,6 +295,8 @@ if(isset($accessToken)){
 		</div><!-- row -->
 	</div><!-- container -->
 	</div>
+	<div class="table-responsive" id="pagination_data">  
+                </div> 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -314,7 +317,7 @@ if(isset($accessToken)){
   </body>
 </html>
  <script>  
- $(document).ready(function(){  
+ $(document).ready(function(){ 
       $('#search_text').keyup(function(){  
            var txt = $(this).val();  
            if(txt != '')  
@@ -333,7 +336,9 @@ if(isset($accessToken)){
            else  
            {  
                 $('#result').html('');                 
-           }  
+           }
+		   
       });  
  });  
  </script>  
+ 
