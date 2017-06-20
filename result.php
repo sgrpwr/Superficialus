@@ -1,4 +1,5 @@
 <?php
+$var_value = $_GET['varname'];
 // Include FB config file && User class
 require_once 'fbConfig.php';
 require_once 'User.php';
@@ -208,7 +209,7 @@ if(isset($accessToken)){
 				
 				<div class="box1 effect1">
                   <div class="col-md-12">
-                       <iframe width="800" height="296" src="https://www.youtube.com/embed/mwE9aNI4xn8" frameborder="0" allowfullscreen></iframe>
+                       <iframe width="800" height="296" src="<?=$var_value ?>" frameborder="0" allowfullscreen></iframe>
                     </div>
                   </div>
 

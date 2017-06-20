@@ -21,7 +21,7 @@
 					 <iframe width="253" height="150" src='.$row["1"].' frameborder="0" allowfullscreen></iframe>
 					  </div>
 					 </td>  
-                     <td>'.$row["2"].'</td>
+                     <td><td><a href="result.php?varname='.$row["1"].'">'.$row["2"].'</a></td></td>
                 </tr>
            ';  
       }  
